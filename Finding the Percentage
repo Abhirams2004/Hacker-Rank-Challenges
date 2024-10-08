@@ -1,0 +1,17 @@
+if __name__ == '__main__':
+    n = int(input())  # Number of students
+    student_marks = {}  # Dictionary to store student names and their marks
+    
+    # Input student names and their marks
+    for _ in range(n):
+        name, *line = input().split()  # Splitting input into name and marks
+        scores = list(map(float, line))  # Convert marks into a list of floats
+        student_marks[name] = scores  # Add to dictionary
+
+    query_name = input()  # The student's name for which the average is queried
+    
+    # Find the average marks of the queried student
+    avg_marks = sum(student_marks[query_name]) / len(student_marks[query_name])
+    
+    # Print the average, formatted to 2 decimal places
+    print(f"{avg_marks:.2f}")
