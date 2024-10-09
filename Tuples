@@ -1,0 +1,9 @@
+if __name__ == '__main__':
+    # Read the integer n
+    n = int(input())
+    
+    # Read the space-separated integers and map them to a tuple
+    integer_list = tuple(map(int, input().split()))
+    
+    # Print the hash of the tuple
+    print(hash(integer_list))
